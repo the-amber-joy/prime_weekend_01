@@ -1,0 +1,32 @@
+body {
+
+}
+
+ul {
+	list-style-type: none;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.container {
+	background-color: #337277;
+	border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    font-family: Helvetica, Arial, "sans-serif";
+}
+
+.results {
+	background-color: #07aa9e;
+	border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
