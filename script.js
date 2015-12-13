@@ -36,11 +36,13 @@ $(document).ready(function(){
 	// 	$(this).closest('#resultsContainer').find('.results').remove();
 	// });
 
+/////// Starting Fresh attempt below ///////
+
 	$('deleteEmployee').on('submit',function(event) {
+		event.preventDefault();
 		$(this).closest('#resultsContainer').find('.results').remove();
 	});
 
-/////// Will continue working on it. Transcendence through suffering... ///////
 
 });
 
