@@ -30,17 +30,11 @@ $(document).ready(function(){
 
 	});
 
-/////// I have tried many approaches but cannot yet get this to work... ///////
+/////// I have tried many approaches but cannot get this to work yet... It's right, I swear! It should work! Why doesn't it work?! Before, it would make all my results disappear. Now nothing happens. ///////
 
-	// $('#deleteEmployee').on('submit',function(event){
-	// 	$(this).closest('#resultsContainer').find('.results').remove();
-	// });
-
-/////// Starting Fresh attempt below ///////
-
-	$('deleteEmployee').on('submit',function(event) {
+	$('.deleteBtn').on('click', function(event){
 		event.preventDefault();
-		$(this).closest('#resultsContainer').find('.results').remove();
+		$(this).parent().remove();
 	});
 
 
@@ -51,11 +45,20 @@ function appendDom(object){
 	$('#resultsContainer').append('<div class="results"></div>');
 	var $el = $('#resultsContainer').children().last();
 
-	$el.append('<h2>Employee #' + object.employeeNumber + '</h2>')
+	$el.append('<h2>Employee #' + object.employeeNumber + '</h2>');
 	$el.append('<p>First Name: ' + object.employeeFirstname + '</p>');
 	$el.append('<p>Last Name: ' + object.employeeLastname + '</p>');
 	$el.append('<p>Employee ID: ' + object.employeeNumber + '</p>');
 	$el.append('<p>Job Title: ' + object.employeeTitle + '</p>');
-	$el.append('<p>Annual Salary: $' + object.employeeSalary + '.00</p>');
-	$el.append('<form id="deleteEmployee"><input type="submit" value="Delete This Entry"/></form>');
+	$el.append('<p>Salary: $' + object.employeeSalary + '</p>');
+	$el.append('<button class="deleteBtn">Remove This Entry</button>');
+
 }
+
+
+
+
+
+
+
+
