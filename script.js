@@ -32,7 +32,11 @@ $(document).ready(function(){
 
 /////// I have tried many approaches but cannot yet get this to work... ///////
 
-	$('#deleteEmployee').on('submit',function(event){
+	// $('#deleteEmployee').on('submit',function(event){
+	// 	$(this).closest('#resultsContainer').find('.results').remove();
+	// });
+
+	$('deleteEmployee').on('submit',function(event) {
 		$(this).closest('#resultsContainer').find('.results').remove();
 	});
 
@@ -42,7 +46,7 @@ $(document).ready(function(){
 
 
 function appendDom(object){
-	$("#resultsContainer").append("<div class='results'></div>");
+	$('#resultsContainer').append('<div class="results"></div>');
 	var $el = $('#resultsContainer').children().last();
 
 	$el.append('<h2>Employee #' + object.employeeNumber + '</h2>')
