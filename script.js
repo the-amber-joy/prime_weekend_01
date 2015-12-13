@@ -1,7 +1,7 @@
 var array = [];
 
 
-$(document).ready(function(){
+$(function(){
 	$('#employeeinfo').on('submit',function(event){
 		event.preventDefault();
 
@@ -30,12 +30,7 @@ $(document).ready(function(){
 
 	});
 
-/////// I have tried many approaches but cannot get this to work yet... It's right, I swear! It should work! Why doesn't it work?! Before, it would make all my results disappear. Now nothing happens. ///////
-
-	$('.deleteBtn').on('click', function(event){
-		event.preventDefault();
-		$(this).parent().remove();
-	});
+/////// I have tried many approaches but cannot get this function to work yet... It's got to be right, I swear it should work! Why doesn't it work?! Before, it would make all my results disappear. Now nothing happens. ///////
 
 
 });
@@ -51,9 +46,15 @@ function appendDom(object){
 	$el.append('<p>Employee ID: ' + object.employeeNumber + '</p>');
 	$el.append('<p>Job Title: ' + object.employeeTitle + '</p>');
 	$el.append('<p>Salary: $' + object.employeeSalary + '</p>');
-	$el.append('<button class="deleteBtn">Remove This Entry</button>');
+	$el.append('<button class="remove">Remove This Entry</button>');
 
 }
+
+$(function(){	
+	$('.results').on('click', '.deleteBtn', function(){
+		$(this).parent('.results').remove();
+	});
+});
 
 
 
