@@ -30,6 +30,18 @@ $(function(){
 
 $('.results').on('click', '.deleteBtn', function(){
 			$(this).parents('.results').remove();
+
+
+// This is where I'm trying to make Pro Mode work. My thinking is that I will loop through 'array' when the button is clicked, and compare the employeeNumber in each Object of that array to the employeeNumber in this div. If they match, I want that entire Object removed from the array, which should also update the salary total since that employee's salary will now be missing.
+			for (i = 0; i < array.length; i++) {
+				if ($(this).parents('.results').find('object.employeeNumber') == array[i].employeeNumber) {
+					remove(array[i])
+				};
+				console.log(array);
+				///// Nope, that didn't do it... I need to go to bed. Maybe attack it again in the morning.
+			}; 
+
+
 		});
 
 	});
@@ -49,10 +61,3 @@ function appendDom(object){
 	$el.append('<button class="deleteBtn">Remove This Entry</button>');
 
 }
-
-
-
-
-
-
-
