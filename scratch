@@ -1,0 +1,8 @@
+$(document).ready(function(){
+
+	$('#deleteEmployee').on('submit', function(event){
+		$(this).closest('#results').remove('#results');
+
+	});
+
+});
