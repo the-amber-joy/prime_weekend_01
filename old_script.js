@@ -27,8 +27,9 @@ $(function(){
 		};
 
 		employeeArray.push(values);
-		console.log(employeeArray);
-		console.log(getMonthlySalaries());
+		console.log("employee array", employeeArray);
+		console.log("get monthly salaries function return", getMonthlySalaries());
+		console.log("all salaries variable", allSalaries);
 
 
 		function clickDelete(){
